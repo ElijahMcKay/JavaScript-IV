@@ -34,14 +34,14 @@ class Student extends Person {
     }
     listsSubjects(array) {
         for(let i = 0; i < array.length; i++) { //I know this wasn't needed, but the instruction say to print them one at a time, hence the for loop
-            console.log(array[i]); 
+            return array[i]; 
         }
     }
     PRAssignment(subject) {
-        return `${student.name} has submitted a PR for ${subject}.`
+        return `${this.name} has submitted a PR for ${subject}.`
     }
     sprintChallenge(subject) {
-        return `${student.name} has begun sprint challenge on ${subject}.`
+        return `${this.name} has begun sprint challenge on ${subject}.`
     }
 }
 
@@ -52,10 +52,10 @@ class ProjectManager extends Instructor {
         this.favInstructor = attributes.favInstructor; 
     }
     standUp(channel) {
-        console.log(`${this.name} announces to ${channel}, @channel standy times!`); 
+        return `${this.name} announces to ${channel}, @channel standy times!`; 
     }
     debugsCode(student, subject) {
-        console.log(`${this.name} debugs ${student.name}'s code on ${subject}`); 
+        return `${this.name} debugs ${student.name}'s code on ${subject}`; 
     }
 }
 
@@ -178,4 +178,73 @@ const dan = new Instructor({
     catchPhrase: ":eggplant:",
 });
 
-isaiah.listsSubjects(isaiah.favSubjects); 
+
+// ================ Testing =================
+
+
+
+// ==== Instructor Testing ====
+
+console.log(dan.name);
+console.log(dan.age);
+console.log(dan.location);
+console.log(dan.specialty);
+console.log(dan.favLanguage);
+console.log(dan.catchPhrase);
+console.log(dan.demo('Javascript')); 
+console.log(dan.grade(nisa, 'LESS')); 
+
+// ==== Project Manager Testing ====
+
+console.log(austin.name);
+console.log(austin.age);
+console.log(austin.gradClassName);
+console.log(austin.favInstructor);
+console.log(austin.location);
+console.log(austin.specialty);
+console.log(austin.favLanguage);
+console.log(austin.catchPhrase);
+console.log(austin.standUp('WEB21_pairprogramming'));
+console.log(austin.debugsCode(nisa, 'Javascript'));
+
+
+console.log(darren.name);
+console.log(darren.age);
+console.log(darren.gradClassName);
+console.log(darren.favInstructor);
+console.log(darren.location);
+console.log(darren.specialty);
+console.log(darren.favLanguage);
+console.log(darren.catchPhrase);
+console.log(darren.standUp('WEB21'));
+console.log(darren.debugsCode(joscelyn, 'HTML'));
+
+// ==== Student Testing ====
+
+console.log(isaiah.name);
+console.log(isaiah.age);
+console.log(isaiah.location);
+console.log(isaiah.previousBackground);
+console.log(isaiah.className);
+console.log(isaiah.favSubjects);
+console.log(isaiah.listsSubjects(isaiah.favSubjects));
+console.log(isaiah.PRAssignment('Advanced CSS'));
+console.log(isaiah.sprintChallenge('Inheritance'));
+
+
+console.log(kevin.name);
+console.log(kevin.age);
+console.log(kevin.location);
+console.log(kevin.previousBackground);
+console.log(kevin.className);
+console.log(kevin.favSubjects);
+console.log(kevin.listsSubjects(kevin.favSubjects)); 
+console.log(kevin.PRAssignment('Closures'));
+console.log(kevin.sprintChallenge('Prototyping'));
+
+
+
+
+
+
+ 
