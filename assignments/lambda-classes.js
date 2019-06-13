@@ -240,7 +240,7 @@ console.log(kevin.className);
 console.log(kevin.favSubjects);
 console.log(kevin.listsSubjects(kevin.favSubjects)); 
 console.log(kevin.PRAssignment('Closures'));
-console.log(kevin.sprintChallenge('Prototyping'));
+console.log(kevin.sprintChallenge('Prototyping')); 
 
 
 
